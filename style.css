@@ -213,6 +213,25 @@ h2 em{font-style:italic;font-weight:800;color:var(--red)}
 .ccard h3{font-family:'Playfair Display',Georgia,serif;color:var(--ink);margin-bottom:6px}
 .ccard p{color:var(--muted);font-weight:300;font-size:.95rem;margin-bottom:18px;line-height:1.55}
 
+/* ---------- SHOWCASE GALLERY (inside the rooms) ---------- */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+@media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}}
+.gallery.wide{grid-template-columns:repeat(2,1fr)}
+@media(max-width:700px){.gallery.wide{grid-template-columns:1fr}}
+.g-item{margin:0;border-radius:16px;overflow:hidden;background:#170a0e;border:1px solid rgba(238,194,106,.3);transition:.35s;position:relative}
+.g-item:hover{transform:translateY(-5px);border-color:var(--gold-bright);box-shadow:0 20px 40px rgba(0,0,0,.45)}
+.g-item img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1;transition:transform .6s cubic-bezier(.2,.8,.25,1)}
+.gallery.wide .g-item img{aspect-ratio:16/10}
+.g-item:hover img{transform:scale(1.06)}
+.g-item figcaption{padding:12px 14px;font-size:.88rem;color:#e9dcc4;line-height:1.45}
+.g-item figcaption b{display:block;font-family:'Playfair Display',Georgia,serif;color:#f6ecdc;font-size:.98rem;margin-bottom:2px}
+.g-item figcaption .by{color:var(--gold-bright);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.showreel{margin-top:26px;border-radius:16px;overflow:hidden;border:1px solid rgba(238,194,106,.35);box-shadow:0 20px 44px rgba(0,0,0,.4)}
+.showreel video{width:100%;display:block;max-height:520px;background:#000}
+.showreel figcaption{padding:12px 14px;font-size:.88rem;color:#e9dcc4;background:#170a0e}
+.showreel figcaption b{font-family:'Playfair Display',Georgia,serif;color:#f6ecdc}
+
 /* CTA band + footer */
 .cta-band{background:linear-gradient(160deg,var(--room-2),var(--room));border-radius:24px;padding:clamp(28px,5vw,52px);text-align:center;color:#e9dcc4;box-shadow:var(--shadow)}
 .cta-band h2{color:#f6ecdc}
