@@ -1,23 +1,28 @@
 # Rao Abdur Rehman — Personal Portfolio (Full Website)
 
-Personal portfolio website of **Rao Abdur Rehman** — Web Developer, E-Commerce (Shopify) Specialist, Graphic Designer & Meta Ads Manager, based in Sargodha, Pakistan.
+Personal portfolio website of **Rao Abdur Rehman** — **E-Commerce Expert**, Shopify & WordPress Developer and Meta Ads Specialist, based in Sargodha, Pakistan.
 
 Plain HTML/CSS/JS — no build step. Hosted free on **GitHub Pages**.
-Theme matches his graphic-designer portfolio: light cream, arched doors with the
-same open-and-step-inside animation, Caveat script accents, Playfair Display headings.
+Theme: light cream, arched doors with the open-and-step-inside animation,
+Caveat script accents, Playfair Display headings.
 
 ## Pages
-- `index.html` — Home: hero, live Sargodha clock, stats, the 4 doors (Web Development, E-Commerce & Shopify, Graphic Design, Meta Ads) with rooms, selected work, CTA
+- `index.html` — Home: hero (E-Commerce Expert), live Sargodha clock, stats, the 4 doors (E-Commerce & Shopify, Shopify Development, WordPress Development, Meta Ads) with rooms, selected work, showcase teaser, CTA
 - `about.html` — My Story, certificates, skills, journey timeline
-- `services.html` — All 4 services in detail + work process
-- `work.html` — All projects (Perfect Pest, Diamond Plus, Best At Pest NYC, DigiSkool, DigitalBizz, Genz Bazzar)
+- `services.html` — All 4 services in detail (E-Commerce & Shopify Stores, Shopify Development, WordPress Development, Meta Ads Management) + work process
+- `showcase.html` — 3 doors with galleries (E-Commerce Stores, Website Themes, Meta Ads)
+- `work.html` — All projects (Genz Bazzar, Perfect Pest, Diamond Plus, Best At Pest NYC, DigiSkool, DigitalBizz)
 - `contact.html` — WhatsApp & email cards, next steps
 
 ## Shared files
 - `style.css` — the whole theme (edit once, applies to every page)
 - `script.js` — clock, rotating roles, marquee, counters, doors/rooms behaviour
 - `rao.webp` — hero portrait (background-removed)
-- `CNAME` — custom domain for GitHub Pages (genzbazzar.com)
+
+**Live at:** https://rao1125.github.io/rao-portfolio/ (repo: https://github.com/rao1125/rao-portfolio)
+The custom domain was detached on purpose (2026-11-15) so this clean link works now.
+To re-attach genzbazzar.com later: add a `CNAME` file containing `genzbazzar.com`
+— but only after the DNS below is set.
 
 ## How to put it live on GitHub Pages
 1. Create a free account at https://github.com (if you don't have one).

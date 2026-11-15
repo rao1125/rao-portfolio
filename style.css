@@ -1,5 +1,5 @@
 /* Rao Abdur Rehman — Personal Portfolio
-   Theme: same as his graphic-designer portfolio (light cream, arched doors) */
+   Theme: light cream, arched doors, red & gold */
 :root{
   --paper:#f4efe4; --paper-2:#ece4d2; --card:#fbf8f1;
   --ink:#1b1712; --ink-2:#453e33; --muted:#7d7462;
@@ -50,6 +50,7 @@ header{position:relative;padding:148px 0 0;background:linear-gradient(180deg,var
 h1{font-family:'Playfair Display',Georgia,serif;font-weight:900;color:var(--ink);font-size:clamp(2.9rem,7vw,5rem);line-height:1.02;margin:8px 0 4px;letter-spacing:-.01em}
 h1 .gold{background:linear-gradient(115deg,var(--red) 10%,var(--gold-bright) 55%,var(--red-deep));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:shine 5s linear infinite}
 @keyframes shine{to{background-position:200% 0}}
+.maintitle{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:clamp(1.7rem,3.8vw,2.5rem);color:var(--red);margin-top:10px;letter-spacing:-.01em}
 .roles{margin:16px 0 4px;font-size:1.12rem;font-weight:700;color:var(--ink);min-height:1.6em}
 .roles .flip{display:inline-block;color:var(--red);animation:flipIn .6s cubic-bezier(.2,.9,.3,1.4)}
 @keyframes flipIn{from{transform:rotateX(85deg) translateY(8px);opacity:0}to{transform:none;opacity:1}}
@@ -103,7 +104,7 @@ h2 em{font-style:italic;font-weight:800;color:var(--red)}
 .reveal.in{animation:revealUp .65s cubic-bezier(.2,.8,.25,1) both}
 @keyframes revealUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 
-/* ---------- DOORS (same shape & animation as the graphic-designer portfolio) ---------- */
+/* ---------- DOORS (arched shape & swing-open animation) ---------- */
 .doors-sec{background:linear-gradient(180deg,var(--paper) 0%,var(--paper-2) 100%)}
 .doors{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;transition:transform .8s cubic-bezier(.55,.06,.75,.4),opacity .5s ease .3s}
 .doors-clip{overflow:hidden;padding:28px;margin:-28px;scroll-margin-top:84px}
@@ -119,9 +120,10 @@ h2 em{font-style:italic;font-weight:800;color:var(--red)}
 .inner-room .ir-label{font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#cdbb9d}
 .inner-room .ir-open{font-family:'Caveat',cursive;font-size:1.15rem;color:var(--gold-bright)}
 .door .leaf{position:absolute;inset:12px 12px 0;border-radius:140px 140px 6px 6px;z-index:2;transform-origin:left center;transition:transform .8s cubic-bezier(.3,.7,.3,1);border:1.5px solid rgba(0,0,0,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;backface-visibility:hidden}
-.door[data-door="web"] .leaf{background:linear-gradient(165deg,#c1272d,#7c1019 70%)}
 .door[data-door="shop"] .leaf{background:linear-gradient(165deg,#d9a441,#9a6d1c 70%)}
-.door[data-door="design"] .leaf{background:linear-gradient(165deg,#31572c,#1c3319 70%)}
+.door[data-door="dev"] .leaf{background:linear-gradient(165deg,#c1272d,#7c1019 70%)}
+.door[data-door="web"] .leaf{background:linear-gradient(165deg,#c1272d,#7c1019 70%)}
+.door[data-door="wp"] .leaf{background:linear-gradient(165deg,#31572c,#1c3319 70%)}
 .door[data-door="ads"] .leaf{background:linear-gradient(165deg,#4a3226,#2a1a12 70%)}
 .leaf .panel-lines{position:absolute;inset:16px;border:1.5px solid rgba(255,255,255,.28);border-radius:120px 120px 4px 4px;pointer-events:none}
 .leaf .knob{position:absolute;right:16px;top:56%;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffe9b0,#b8892f 70%);border:1px solid rgba(0,0,0,.4);box-shadow:0 2px 6px rgba(0,0,0,.4)}
@@ -156,6 +158,8 @@ h2 em{font-style:italic;font-weight:800;color:var(--red)}
 .scard{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:32px 28px;transition:.3s;position:relative;overflow:hidden;box-shadow:var(--shadow)}
 .scard::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at 15% -10%,rgba(217,164,65,.16),transparent 60%);pointer-events:none}
 .scard:hover{transform:translateY(-5px);border-color:var(--gold)}
+.scard.featured{border:2px solid var(--gold)}
+.feat-badge{display:inline-block;background:var(--red);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;position:relative}
 .scard .ico{font-size:2rem;margin-bottom:14px}
 .scard h3{font-family:'Playfair Display',Georgia,serif;font-size:1.45rem;font-weight:800;color:var(--red);margin-bottom:10px}
 .scard p{font-weight:300;line-height:1.65;color:var(--ink-2);margin-bottom:16px}
@@ -227,10 +231,6 @@ h2 em{font-style:italic;font-weight:800;color:var(--red)}
 .g-item figcaption{padding:12px 14px;font-size:.88rem;color:#e9dcc4;line-height:1.45}
 .g-item figcaption b{display:block;font-family:'Playfair Display',Georgia,serif;color:#f6ecdc;font-size:.98rem;margin-bottom:2px}
 .g-item figcaption .by{color:var(--gold-bright);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-.showreel{margin-top:26px;border-radius:16px;overflow:hidden;border:1px solid rgba(238,194,106,.35);box-shadow:0 20px 44px rgba(0,0,0,.4)}
-.showreel video{width:100%;display:block;max-height:520px;background:#000}
-.showreel figcaption{padding:12px 14px;font-size:.88rem;color:#e9dcc4;background:#170a0e}
-.showreel figcaption b{font-family:'Playfair Display',Georgia,serif;color:#f6ecdc}
 
 /* CTA band + footer */
 .cta-band{background:linear-gradient(160deg,var(--room-2),var(--room));border-radius:24px;padding:clamp(28px,5vw,52px);text-align:center;color:#e9dcc4;box-shadow:var(--shadow)}

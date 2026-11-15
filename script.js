@@ -12,7 +12,7 @@ if (clockEl) {
 // Rotating roles in the hero
 const flipEl = document.getElementById('roleFlip');
 if (flipEl) {
-  const roles = ['Web Developer', 'E-Commerce Specialist', 'Graphic Designer', 'Meta Ads Manager'];
+  const roles = ['Shopify Expert', 'Shopify Developer', 'WordPress Developer', 'Web Developer', 'Meta Ads Specialist'];
   let ri = 0;
   setInterval(() => {
     ri = (ri + 1) % roles.length;
@@ -25,7 +25,7 @@ if (flipEl) {
 // Marquee (content doubled for a seamless loop)
 const mq = document.getElementById('mq');
 if (mq) {
-  const items = ['Web Development', 'E-Commerce', 'Shopify Stores', 'Graphic Design', 'Meta Ads', 'Premium Websites', 'Worldwide · Remote'];
+  const items = ['E-Commerce', 'Shopify Stores', 'Shopify Development', 'WordPress', 'Meta Ads', 'Web Development', 'Worldwide · Remote'];
   const half = items.map(t => `<span>${t}</span><span><b>✦</b></span>`).join('');
   mq.innerHTML = half + half;
 }
@@ -42,22 +42,23 @@ const cio = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .5 });
 document.querySelectorAll('.count').forEach(el => cio.observe(el));
 
-// Scroll reveal (one-shot, like the graphic-designer portfolio)
+// Scroll reveal (one-shot)
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
 }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-/* ---------- Doors / rooms (same behaviour as the graphic-designer portfolio) ----------
+/* ---------- Doors / rooms ----------
    Click a door: the leaf swings open, the view pushes in through the doorway
    (the doors grid zooms and fades), then the room panel appears below. */
 const doorsGrid = document.getElementById('doorsGrid');
 if (doorsGrid) {
   const DOORS = {
-    web:    { num: '01', name: 'Web Development' },
-    shop:   { num: '02', name: 'E-Commerce & Shopify' },
-    design: { num: '03', name: 'Graphic Design' },
-    ads:    { num: '04', name: 'Meta Ads' }
+    shop: { num: '01', name: 'E-Commerce & Shopify' },
+    dev:  { num: '02', name: 'Shopify Development' },
+    wp:   { num: '03', name: 'WordPress Development' },
+    ads:  { num: '04', name: 'Meta Ads' },
+    web:  { num: '02', name: 'Website Themes' }
   };
   let currentDoor = null, entering = false;
 
